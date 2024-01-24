@@ -1,7 +1,7 @@
-using HandlebarsTest.Services.Implemented;
-using HandlebarsTest.Services.Interface;
 using HandlebarsDotNet;
 using Newtonsoft;
+using HtmlMapperUsingHandlebars.Services.Interface;
+using HtmlMapperUsingHandlebars.Services.Implemented;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

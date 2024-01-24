@@ -1,7 +1,7 @@
 ﻿using HandlebarsDotNet;
-using HandlebarsTest.Services.Interface;
+using HtmlMapperUsingHandlebars.Services.Interface;
 using Newtonsoft.Json.Linq;
-namespace HandlebarsTest.Services.Implemented
+namespace HtmlMapperUsingHandlebars.Services.Implemented
 {
     public class TemplateMapperService : ITemplateMapperService
     {
@@ -57,8 +57,10 @@ namespace HandlebarsTest.Services.Implemented
         //</body>
         //</html>";
 
-        public TemplateMapperService() {
-            Handlebars.RegisterHelper("isFirst", (writer, context, parameters) => {
+        public TemplateMapperService()
+        {
+            Handlebars.RegisterHelper("isFirst", (writer, context, parameters) =>
+            {
                 if (parameters.At<int>(0) == 0)
                 {
                     writer.WriteSafeString("font-weight: bold");

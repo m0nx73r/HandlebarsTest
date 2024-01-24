@@ -1,7 +1,6 @@
-﻿
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 
-namespace HandlebarsTest.Models.RequestModels
+namespace HtmlMapperUsingHandlebars.Models.RequestModels
 {
     public class TemplateMappingRequestModel
     {
@@ -10,6 +9,6 @@ namespace HandlebarsTest.Models.RequestModels
         public string Template { get; set; }
 
         //[Required]
-        public object Body {  get; set; }
+        public object Body { get; set; }
     }
 }

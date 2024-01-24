@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Routing.Template;
 using Newtonsoft.Json.Linq;
 
-namespace HandlebarsTest.Services.Interface
+namespace HtmlMapperUsingHandlebars.Services.Interface
 {
     public interface ITemplateMapperService
     {

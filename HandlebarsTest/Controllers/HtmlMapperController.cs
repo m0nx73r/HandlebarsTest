@@ -1,9 +1,9 @@
-﻿using HandlebarsTest.Models.RequestModels;
-using HandlebarsTest.Services.Interface;
+﻿using HtmlMapperUsingHandlebars.Models.RequestModels;
+using HtmlMapperUsingHandlebars.Services.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 
-namespace HandlebarsTest.Controllers
+namespace HtmlMapperUsingHandlebars.Controllers
 {
 
     [ApiController]
@@ -12,14 +12,15 @@ namespace HandlebarsTest.Controllers
     public class HtmlMapperController : ControllerBase
     {
         private readonly ITemplateMapperService _userMappingService;
-        public HtmlMapperController(ITemplateMapperService userMappingService) {
-            this._userMappingService = userMappingService;
+        public HtmlMapperController(ITemplateMapperService userMappingService)
+        {
+            _userMappingService = userMappingService;
         }
 
         [HttpPost("[action]")]
-        public IActionResult MapTemplate([FromBody] TemplateMappingRequestModel request) 
+        public IActionResult MapTemplate([FromBody] TemplateMappingRequestModel request)
         {
-            
+
             string template = request.Template;
             JObject data = JObject.Parse(request.Body.ToString());
             Console.WriteLine(data);
