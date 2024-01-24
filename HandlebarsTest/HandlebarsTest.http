@@ -1,0 +1,6 @@
+@HandlebarsTest_HostAddress = http://localhost:5195
+
+GET {{HandlebarsTest_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
